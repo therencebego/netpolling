@@ -1,0 +1,1 @@
+http://thomas-sebire.net/blog/2012/02/04/django-et-ajax-comment-faire/

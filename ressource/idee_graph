@@ -1,0 +1,6 @@
+networkx modle python
+
+idée exploiter le principe de ce module cad pour generer le graph faire un système de node du genre router 1 relier à router 2-3-4, puis router 2
+
+un json qui represente tout les device
+puis un json pour les connections

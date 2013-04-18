@@ -1,0 +1,14 @@
+R={id
+	N1={
+		device:
+		id:
+		SR:[{id,device},{device,id,SR[{id,device}],...]}
+
+		1)@IP root
+			2) Selection GW @IProute
+			3) Detection des devices
+				si routeur => Etape 2
+				else => dessin du device
+				affichant une fenetre sur la 
+Cartographie : Pouvoir grap la map pour se déplacer
+				infos en clic (pas en over) (A decider si pop-up ou zone de texte) 
