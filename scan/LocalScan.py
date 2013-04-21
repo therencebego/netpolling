@@ -8,8 +8,8 @@ This file contain the class : LocalScan
 
 class LocalScan:
     """LocalScan :
-        - net : this variable contain the pattern of the network (ex : 192.168.0.* or 10.8.12.* for netmask /24)
-        - name : this variable contain the name for identify the scan in the database
+    \param - net : this variable contain the pattern of the network (ex : 192.168.0.* or 10.8.12.* for netmask /24)
+    \param - name : this variable contain the name for identify the scan in the database
     """
     def __init__(self, name, net):
         self.net = net
@@ -17,7 +17,7 @@ class LocalScan:
 
     def GetIpAndMac(self):
         """GetIpAndMac :
-        This method scans the network to get adresses ip and mac of all machines
+        \details This method scans the network to get adresses ip and mac of all machines
         """
         ans, unans = arping(self.net)
         l = list()
@@ -45,3 +45,8 @@ class LocalScan:
         """GetRoute :
         """
         return
+
+if __name__ == "__main__":
+    scan = LocalScan('home', '192.168.0.*')
+    l = scan.GetIpAndMac()
+    print l
