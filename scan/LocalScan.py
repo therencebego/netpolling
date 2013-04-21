@@ -31,10 +31,15 @@ class LocalScan:
         """
         return
 
-    def GetOS(self):
+    def GetOS(self, ip):
         """GetOS :
         """
-        return
+        load_module("nmap")
+        conf.nmap_base
+        ans, unans = nmap_fp(ip)
+        #traitement de la réponse pour en resortir un os
+        os = ''
+        return os
 
     def GetHostName(self):
         """GetHostName :
@@ -50,4 +55,6 @@ class LocalScan:
 if __name__ == "__main__":
     scan = LocalScan('home', '192.168.0.*')
     l = scan.GetIpAndMac()
+    for elem in l:
+        elem.os = scan.GetOS(elem.ip)
     print l
