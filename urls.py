@@ -7,4 +7,6 @@ from django.conf.urls import patterns, include, url
 urlpatterns = patterns('',
                        url('^$', 'netpolling.iw.views.index'),
                        url(r'^index/$', 'netpolling.iw.views.index'),
-                       url(r'^co/$', 'netpolling.iw.views.co'))
+                       url(r'^co/$', 'netpolling.iw.views.co'),
+                       url(r'^manager/$', 'netpolling.iw.views.manager'),
+                       url(r'^control/$', 'netpolling.iw.views.control', name="control"))
