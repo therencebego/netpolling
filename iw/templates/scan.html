@@ -1,8 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-    <h1>GG</h1>
-</body>
+    <head>
+    </head>
+    <body>
+        <div class="hero-unit">
+            <img src="/public/img/search.png">
+            <h2>Initialisation de scan</h2>
+            <div class="accordion" id="accordion">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#form0">
+                            Scan Local
+                        </a>
+                    </div>
+                    <div id="form0" class="accordion-body collapse in">
+                        <div class="accordion-inner">
+                            <form action="connect" method="post" enctype="application/x-www-form-urlencoded">
+                               {% csrf_token %}
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#form1">
+                            Scan externe
+                        </a>
+                    </div>
+                    <div id="form1" class="accordion-body collapse in">
+                        <div class="accordion-inner">
+                            Anim pariatur cliche...
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#form2">
+                            The Scan
+                        </a>
+                    </div>
+                    <div id="form2" class="accordion-body collapse in">
+                        <div class="accordion-inner">
+                            Anim pariatur cliche...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
 </html>

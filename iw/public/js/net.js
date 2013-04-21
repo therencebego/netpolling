@@ -21,6 +21,7 @@ $(window).load((function()
 
                     $("a.menu").on("click", function()
                                                {
+                                                   var id = this.id
                                                    $.ajax({
                                                        type: 'post',
                                                        headers:
@@ -35,7 +36,12 @@ $(window).load((function()
                                                        timeout: 3000,
                                                        success:function(data)
                                                        {
-                                                           $("#main").html(data)
+                                                           $("#main").html(data);
+                                                           if (id == 0)
+                                                           {
+                                                               $(".collapse").collapse({toggle:true});
+                                                           }
+
                                                        },
                                                        error: function()
                                                        {
