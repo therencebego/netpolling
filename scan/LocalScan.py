@@ -39,6 +39,7 @@ class LocalScan:
     def GetHostName(self):
         """GetHostName :
         """
+        # utiliser nslookup /host à test (il faut un servuer dns voir ce que ça donne à l'école
         return
 
     def GetRoute(self):
