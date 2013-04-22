@@ -4,16 +4,45 @@
 from django.shortcuts import render, render_to_response
 from django.http import HttpResponse
 
-def index(request):
+def Index(request):
+    """
+    \author Damien Goldenberg
+    \name Index:
+    \param - Request, HTTPRequest object
+    \details Description:
+    \details This is a view function. It displays the index
+    """
     return render(request, 'index.html', {})
 
-def co(request):
+def Co(request):
+    """
+    \author Damien Goldenberg
+    \name Co:
+    \param - Request, HTTPRequest object
+    \details Description:
+    \details This is a view function. It displays the connection form
+    """
     return render(request, 'co.html', {})
 
-def manager(request):
+def Manager(request):
+    """
+    \author Damien Goldenberg
+    \name Manager:
+    \param - Request, HTTPRequest object
+    \details Description:
+    \details This is a view function. It displays the interface manager
+    """
     return render(request, 'manager.html', {})
 
-def control(request):
+def Control(request):
+    """
+    \author Damien Goldenberg
+    \name Control:
+    \param - Request, HTTPRequest object
+    \details Description:
+    \details This is a view function that works with ajax request.
+    \details It displays the interface the content of the manager
+    """
     if request.is_ajax():
         if request.POST.get("id"):
             id = int(request.POST.get("id"))
@@ -28,5 +57,5 @@ def control(request):
             else:
                 view = 'error.html'
             return render_to_response(view, {})
-        return HttpResponse("error POST" +request.POST.get("id")+request.method)
-    return HttpResponse("error AJAX")
+        return render_to_response('error.html', {'type':'error post'})
+    return render_to_response('error.html', {'type':'error ajax'})
