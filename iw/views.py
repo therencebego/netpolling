@@ -6,42 +6,42 @@ from django.http import HttpResponse
 
 def Index(request):
     """
-    \author Damien Goldenberg
-    \name Index:
-    \param - Request, HTTPRequest object
-    \details Description:
-    \details This is a view function. It displays the index
+    @author Damien Goldenberg
+    @name Index:
+    @param - Request, HTTPRequest object
+    @details Description:
+    This is a view function. It displays the index
     """
     return render(request, 'index.html', {})
 
 def Co(request):
     """
-    \author Damien Goldenberg
-    \name Co:
-    \param - Request, HTTPRequest object
-    \details Description:
-    \details This is a view function. It displays the connection form
+    @author Damien Goldenberg
+    @name Co:
+    @param - Request, HTTPRequest object
+    @details Description:
+    This is a view function. It displays the connection form
     """
     return render(request, 'co.html', {})
 
 def Manager(request):
     """
-    \author Damien Goldenberg
-    \name Manager:
-    \param - Request, HTTPRequest object
-    \details Description:
-    \details This is a view function. It displays the interface manager
+    @author Damien Goldenberg
+    @name Manager:
+    @param - Request, HTTPRequest object
+    @details Description:
+    This is a view function. It displays the interface manager
     """
     return render(request, 'manager.html', {})
 
 def Control(request):
     """
-    \author Damien Goldenberg
-    \name Control:
-    \param - Request, HTTPRequest object
-    \details Description:
-    \details This is a view function that works with ajax request.
-    \details It displays the interface the content of the manager
+    @author Damien Goldenberg
+    @name Control:
+    @param - Request, HTTPRequest object
+    @details Description:
+    This is a view function that works with ajax request.
+    It displays the interface the content of the manager
     """
     if request.is_ajax():
         if request.POST.get("id"):
